@@ -3,6 +3,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { playlists } from '@/components/constants'
+import Navbar from '@/components/shared/Navbar/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,9 +26,14 @@ export default function RootLayout({
               <>
                 <main>
                   {/* No Topbar in procurement */}
+                
                   <div className="flex flex-1 self-stretch">
                     <LeftSidebar playlists={playlists} />
-                    {children}
+                    <div className='w-full h-screen overflow-hidden'>
+                         <Navbar/>
+                       {children}
+                    </div>
+                   
                   </div>
                   {/* <BottomBar /> */}
                 </main>

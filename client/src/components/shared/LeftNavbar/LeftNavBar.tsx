@@ -47,7 +47,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
   return (
     <div
       className={cn(
-        ` bg-background text-foreground block group self-stretch h-screen overflow-y-auto px-4 py-4 border-r ${
+        ` bg-backgroundTemp text-foregroundTemp block group self-stretch h-screen overflow-y-auto px-4 py-4 border-r ${
           hovered ? "w-64" : "w-min"
         }`,
         className
@@ -84,7 +84,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               "bg-accent border-l-2 border-primary "
             }`}
           >
-            <AiOutlineBell className={`${hovered && "mr-2"} h-6 w-6`} />
+            <AiOutlineBell className={`${hovered && "mr-2"} h-5 w-5`} />
             {hovered && "Notification"}
           </Button>
         </Link>
@@ -97,7 +97,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               "bg-accent border-l-2 border-primary "
             }`}
           >
-            <AiOutlineDashboard className={`${hovered && "mr-2"} h-6 w-6`} />
+            <AiOutlineDashboard className={`${hovered && "mr-2"} h-5 w-5`} />
             {hovered && "Dashboard"}
           </Button>
         </Link>
@@ -110,7 +110,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               "bg-accent border-l-2 border-primary "
             }`}
           >
-            <AiOutlineShop className={`${hovered ? "mr-2" : "m-2"} h-6 w-6`} />
+            <AiOutlineShop className={`${hovered ? "mr-2" : "m-2"} h-5 w-5`} />
             {hovered && "Marketplace"}
           </Button>
         </Link>
@@ -122,7 +122,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               pathname === "/items" && "bg-accent border-l-2 border-primary "
             }`}
           >
-            <BiCube className={`${hovered ? "mr-2" : "m-2"} h-6 w-6`} />
+            <BiCube className={`${hovered ? "mr-2" : "m-2"} h-5 w-5`} />
             {hovered && "Item"}
           </Button>
         </Link>
@@ -134,7 +134,7 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               pathname === "/parties" && "bg-accent border-l-2 border-primary "
             }`}
           >
-            <AiOutlineTeam className={`${hovered ? "mr-2" : "m-2"} h-6 w-6`} />
+            <AiOutlineTeam className={`${hovered ? "mr-2" : "m-2"} h-5 w-5`} />
             {hovered && "Parties"}
           </Button>
         </Link>
@@ -157,15 +157,15 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
               }`}
             >
               <FiShoppingBag
-                className={`${hovered ? "mr-2" : "m-2"} h-6 w-6`}
+                className={`${hovered ? "mr-2" : "m-2"} h-5 w-5`}
               />
               {hovered && "Purchase"}
               {hovered && (
                 <>
                   {purchaseOpen ? (
-                    <ChevronDownIcon className="ml-auto h-6 w-6" />
+                    <ChevronDownIcon className="ml-auto h-5 w-5" />
                   ) : (
-                    <ChevronRightIcon className="ml-auto h-6 w-6" />
+                    <ChevronRightIcon className="ml-auto h-5 w-5" />
                   )}
                 </>
               )}
@@ -176,17 +176,17 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
             <CollapsibleContent className="space-y-1">
               <Link href="/requisitions">
                 <Button variant="ghost" className="w-full justify-start">
-                  <VscNewFile className="mr-2 ml-4  h-6 w-6" /> Requisition
+                  <VscNewFile className="mr-2 ml-4  h-5 w-5" /> Requisition
                 </Button>
               </Link>
               <Link href="/rfqs">
                 <Button variant="ghost" className="w-full justify-start">
-                  <AiOutlineFileSearch className="mr-2 ml-4 h-6 w-6" /> RFQ
+                  <AiOutlineFileSearch className="mr-2 ml-4 h-5 w-5" /> RFQ
                 </Button>
               </Link>
               <Link href="/orders">
                 <Button variant="ghost" className="w-full justify-start">
-                  <LuFileCheck className="mr-2 ml-4 h-6 w-6" />
+                  <LuFileCheck className="mr-2 ml-4 h-5 w-5" />
                   Orders
                 </Button>
               </Link>
@@ -212,14 +212,14 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
                 "bg-accent border-l-2 border-primary "
               }`}
             >
-              <BiDollar className={`${hovered ? "mr-2" : "m-2"} h-6 w-6`} />
+              <BiDollar className={`${hovered ? "mr-2" : "m-2"} h-5 w-5`} />
               {hovered && "Sales"}
               {hovered && (
                 <>
                   {salesOpen ? (
-                    <ChevronDownIcon className="ml-auto h-6 w-6" />
+                    <ChevronDownIcon className="ml-auto h-5 w-5" />
                   ) : (
-                    <ChevronRightIcon className="ml-auto h-6 w-6" />
+                    <ChevronRightIcon className="ml-auto h-5 w-5" />
                   )}
                 </>
               )}
@@ -229,23 +229,23 @@ export default function LeftSidebar({ className, playlists }: SidebarProps) {
             <CollapsibleContent className="space-y-1">
               <Link href="/leads">
                 <Button variant="ghost" className="w-full justify-start">
-                  <FiTrendingUp className="mr-2 ml-4  h-6 w-6" /> Leads
+                  <FiTrendingUp className="mr-2 ml-4  h-5 w-5" /> Leads
                 </Button>
               </Link>
               <Link href="/livebids">
                 <Button variant="ghost" className="w-full justify-start">
-                  <ImHammer2 className="mr-2 ml-4 h-6 w-6" /> Live Bids
+                  <ImHammer2 className="mr-2 ml-4 h-5 w-5" /> Live Bids
                 </Button>
               </Link>
               <Link href="/chats">
                 <Button variant="ghost" className="w-full justify-start">
-                  <BsChatLeftDots className="mr-2 ml-4 h-6 w-6" />
+                  <BsChatLeftDots className="mr-2 ml-4 h-5 w-5" />
                   Chats
                 </Button>
               </Link>
               <Link href="/grn">
                 <Button variant="ghost" className="w-full justify-start">
-                  <LuFileCheck className="mr-2 ml-4 h-6 w-6" />
+                  <LuFileCheck className="mr-2 ml-4 h-5 w-5" />
                   GRN - Reciepts
                 </Button>
               </Link>

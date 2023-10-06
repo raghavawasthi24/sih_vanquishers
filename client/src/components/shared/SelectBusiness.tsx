@@ -106,7 +106,7 @@ export default function SelectBusiness({ className }: SelectBusinessProps) {
             <CaretSortIcon className="ml-auto h-4 w-4 shrink-0 opacity-50" />
           </Button>
         </PopoverTrigger>
-        <PopoverContent className="w-[300px] relative left-2 p-0 bg-white">
+        <PopoverContent className="w-[300px] relative left-2 p-0 bg-foreground">
           <Command>
             <CommandList>
               {businesses.map((group) => (
@@ -118,7 +118,7 @@ export default function SelectBusiness({ className }: SelectBusinessProps) {
                         setSelectedBusiness(account);
                         setOpen(false);
                       }}
-                      className="text-sm"
+                      className="text-sm text-black"
                     >
                       <Avatar className="mr-2 h-5 w-5">
                         <AvatarImage
