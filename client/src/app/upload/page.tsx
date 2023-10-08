@@ -1,6 +1,5 @@
 "use client"
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+
 import { Label } from "@/components/ui/label";
 import React from "react";
 import axios from "axios"
@@ -8,14 +7,24 @@ import axios from "axios"
 type Props = {};
 
 export default function UploadImage({}: Props) {
-  const uploadImage=(e:React.ChangeEvent<HTMLInputElement>)=>{
-    console.log(e.target.files[0])
-    const formdata = new FormData();
-    formdata.append("image", e.target.files[0])
-    axios.post("https://divyanshurana312.pythonanywhere.com/predictions/predict/",formdata)
-    .then((res)=>{
-      console.log(res)
-    })
+
+  const uploadImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const image = e.target.files?.[0] as File | undefined; // Explicitly cast to File
+    if (image) {
+      console.log(image);
+      const formData = new FormData();
+      formData.append("image", image);
+      axios
+        .post("https://divyanshurana312.pythonanywhere.com/predictions/predict/", formData)
+        .then((res) => {
+          console.log(res);
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    } else {
+      console.error("No file selected");
+    }
   }
 
   return (

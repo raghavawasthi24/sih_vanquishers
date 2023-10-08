@@ -7,7 +7,7 @@ type Props = {}
 
 export default function Navbar({}: Props) {
   return (
-    <div className="px-6 py-2 border border-b w-full flex flex-1 items-center">
+    <div className="px-6 py-2 border border-b w-full flex flex-1 items-center bg-foregroundTemp z-10">
        <div className=' flex flex-1 items-center'>
            <Image src="/MinistryofCoalLogo.svg" alt='logo' width={50} height={50}/>
            <p className='font-bold text-2xl ml-2'>Ministry Of Coal</p>
